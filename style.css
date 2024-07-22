@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+   --Orange : hsl(25, 97%, 53%);
+   --White: hsl(0, 0%, 100%);
+   --Light-Grey: hsl(217, 12%, 63%);
+   --Dark-Blue: hsl(213, 19%, 18%);
+   --Very-Dark-Blue: hsl(216, 12%, 8%);
+   --Dark: hsl(215, 28%, 13%);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 1rem;
+   background-color: var(--Very-Dark-Blue);
+   font-family: 'Overpass', 'san-serif';
+   gap: 1rem;
+}
+
+section{
+   background-color: var(--Dark);
+   padding: 1rem;
+   border-radius: 1rem;
+   max-width: 20rem;
+   line-height: 1.5rem;
+}
+
+.card-container.hide{
+   display: none;
+}
+
+.card-container{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   color: var(--Light-Grey);
+   font-size: small;
+   font-weight: 500;
+}
+
+
+.card-container h1{
+   color: var(--White);
+}
+
+.card-star, .rate-span{
+   background-color: var(--Dark-Blue);
+   width: 2.5rem;
+   height: 2.5rem;
+   border-radius: 50%;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.card-container img{
+   display: block;
+   width: 0.8rem;
+}
+
+#number-option{
+   display: flex;
+   justify-content: space-between;
+}
+
+.rate-span{
+   cursor: pointer;
+}
+
+.active{
+   background-color: var(--White);
+}
+
+.rate-span:hover{
+   background-color: var(--Orange);
+   color: var(--Very-Dark-Blue);
+}
+
+
+.card-container button{
+   padding: 1rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   background-color: var(--Orange);
+   border: none;
+   border-radius: 2rem;
+   cursor: pointer;
+}
+
+.card-container button:hover{
+   background-color: var(--White);
+   transition: 0.5s ease-in-out;
+}
+
+
+
+
+/* for rating card */
+.thank-you-card{
+   display: none;
+}
+
+.show{
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 1.5rem;
+   color: var(--Light-Grey);
+   font-size: small;
+}
+
+.thank-you-card img{
+   max-width: 80%
+}
+
+.selected{
+   color: var(--Orange);
+   background-color: var(--Dark-Blue);
+   width: 50%;
+   border-radius: 1rem;
+   padding: 0.5rem;
+}
+
+.thank-you-card h1{
+   color: var(--White);
+}
